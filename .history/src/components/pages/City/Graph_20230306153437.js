@@ -47,7 +47,7 @@ const Graph = () => {
             },
             {
               name: "Common",
-              data: [10 , 0],
+              data: [100 , 0],
             },
             
           ]}

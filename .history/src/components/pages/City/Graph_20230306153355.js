@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import HOC from "../../layout/HOC";
 import Chart from "react-apexcharts";
 import axios from "axios";
@@ -17,10 +17,6 @@ const Graph = () => {
       console.log(e)
     }
   }
-
-  useEffect(() => {
-    fetchData()
-  },[])
 
   return (
     <section>
@@ -39,15 +35,15 @@ const Graph = () => {
           series={[
             {
               name: "Male",
-              data: [ data?.male , 0 ],
+              data: [412 , 0 ],
             },
             {
               name: "Female",
-              data: [data?.female , 0],
+              data: [200 , 0],
             },
             {
               name: "Common",
-              data: [10 , 0],
+              data: [100 , 0],
             },
             
           ]}

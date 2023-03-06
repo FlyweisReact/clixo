@@ -39,15 +39,15 @@ const Graph = () => {
           series={[
             {
               name: "Male",
-              data: [ data?.male , 0 ],
+              data: [ data?.male} , 0 ],
             },
             {
               name: "Female",
-              data: [data?.female , 0],
+              data: [200 , 0],
             },
             {
               name: "Common",
-              data: [10 , 0],
+              data: [100 , 0],
             },
             
           ]}

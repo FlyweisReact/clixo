@@ -23,7 +23,6 @@ import CommonUser from "./components/pages/CommonUser";
 import Servie from "./components/pages/Payment/Servie";
 import HeroBooking from "./components/pages/GenerateId/HeroBooking";
 import CustomerBooking from "./components/pages/Customers/CustomerBooking";
-import Revenue from "./components/pages/Notifications/Revenue";
 
 function App() {
   return (
@@ -50,7 +49,7 @@ function App() {
         <Route path="/service" element={<Servie />} />
         <Route path="/heroBooking/:id" element={<HeroBooking />} />
         <Route path="/customerBooking/:id" element={<CustomerBooking />} />
-        <Route path="/revenue" element={<Revenue />} />
+        <Route path="/revenue" element={<Reve}
 
       </Routes>
     </>

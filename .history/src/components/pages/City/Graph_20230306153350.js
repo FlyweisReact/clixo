@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import HOC from "../../layout/HOC";
 import Chart from "react-apexcharts";
 import axios from "axios";
@@ -12,15 +12,11 @@ const Graph = () => {
   const fetchData = async () => {
     try{
       const { data } = await axios.get("http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:5002/revenue/countOfMaleAndFemale")
-      setData(data)
+      setDtaa
     }catch(e){
       console.log(e)
     }
   }
-
-  useEffect(() => {
-    fetchData()
-  },[])
 
   return (
     <section>
@@ -39,15 +35,15 @@ const Graph = () => {
           series={[
             {
               name: "Male",
-              data: [ data?.male , 0 ],
+              data: [412 , 0 ],
             },
             {
               name: "Female",
-              data: [data?.female , 0],
+              data: [200 , 0],
             },
             {
               name: "Common",
-              data: [10 , 0],
+              data: [100 , 0],
             },
             
           ]}
