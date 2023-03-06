@@ -1,0 +1,256 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Wcomponents */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.fast-food {
+  width: 100px;
+  /* border-radius: 10px; */
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.searchBar {
+  border: 1px solid black;
+  outline: none;
+  color: black;
+  width: 30%;
+  margin-left: 25%;
+  border-radius: 5px;
+}
+
+.main-card--container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 500px));
+  grid-gap: 50px;
+  justify-content: space-around;
+}
+.card-container {
+  margin: 25px 0 auto;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.img-thumbnail {
+  width: 80px;
+}
+.formD {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 650px !important;
+  padding: 5%;
+  color: black;
+  margin-top: 5%;
+  padding-top: 10px;
+}
+
+.formD p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.formD button {
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.myICons {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.myICons:hover {
+  box-shadow: none;
+  transform: scale(0.8);
+}
+
+* {
+  outline: none;
+}
+.dropdown {
+  margin-bottom: 1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.dropdown .upper {
+  color: black;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 2px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: black;
+  width: 200px;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.dropdown-content p {
+  padding: 5px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown .dropdown-content p:hover {
+  background-color: #5b63d7;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: blue;
+}
+
+input:checked + .slider::before {
+  transform: translate(20px);
+}
+
+.NewForm {
+  color: black;
+}
+.NewForm select {
+  width: 70%;
+}
+.NewForm div {
+  display: flex;
+  justify-content: space-between;
+}
+.NewForm textarea {
+  width: 70%;
+  border: 1px solid #bfbfbf;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+  .response {
+   max-width: 80%;
+   margin-left: 10%;
+  }
+}
+
+.swipe{
+  width: 50px;
+  margin-left: 10px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: blue;
+  position: relative;
+  cursor: pointer;
+
+}
+.swipe div{
+  width: 22px;
+  position:absolute;
+  height: 22px;
+  right : 5px ;
+  top: 4px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.swipe2{
+  width: 50px;
+  margin-left: 10px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #cccccc;
+  position: relative;
+  cursor: pointer;
+
+}
+.swipe2 div{
+  width: 22px;
+  position:absolute;
+  height: 22px;
+  left : 5px ;
+  top: 4px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+
+.toggleBtn {
+  background-color: ;
+}
