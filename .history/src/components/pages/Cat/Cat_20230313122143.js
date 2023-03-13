@@ -137,7 +137,7 @@ const Cat = () => {
               <Form.Label>Link</Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => setLink(e.target.value)}
+                onChange={(e) => setDesc(e.target.value)}
                 
               />
             </Form.Group>
@@ -276,14 +276,7 @@ const Cat = () => {
                       style={{ width: "100%", height: "200px" }}
                     />
                     <p style={{ textAlign: "center" }}> {i.desc} </p>
-                    <p style={{ textAlign: "center" }}>
-                      <a
-                        href={i.link}
-                        target="_blank"
-                        rel="noreferrer">
-                        Link
-                      </a>
-                    </p>
+
                     <div
                       style={{
                         marginTop: "2%",

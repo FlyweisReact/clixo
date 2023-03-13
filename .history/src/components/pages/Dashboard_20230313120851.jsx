@@ -71,7 +71,6 @@ const Dashboard = () => {
       number: "8",
       icon: <i className="fa-solid fa-money-bill text-2xl text-[#aa5de1]"></i>,
       bg: "#aa5de1",
-      link: "/pay",
     },
 
     {

@@ -19,16 +19,11 @@ const Revenue = () => {
         "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:5002/revenue/getrevenue"
       );
       setData(data);
-      console.log(data)
+      console.log(data._earning)
     } catch (e) {
       console.log(e);
     }
   };
-
-
-
-  let totalEarning = data.reduce((accumulator, currentValue) => accumulator + currentValue.earning, 0);
-  
 
   useEffect(() => {
     fetchData();
@@ -132,9 +127,6 @@ const Revenue = () => {
           ))}
         </tbody>
       </Table>
-
-
-      <p style={{color : 'black' , fontSize : '20px' ,textAlign : 'right' , marginRight : '10px'}}>Total : {totalEarning} </p>
     </>
   );
 };

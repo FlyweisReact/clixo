@@ -26,6 +26,8 @@ const Revenue = () => {
   };
 
 
+  
+
 
   let totalEarning = data.reduce((accumulator, currentValue) => accumulator + currentValue.earning, 0);
   
@@ -132,9 +134,6 @@ const Revenue = () => {
           ))}
         </tbody>
       </Table>
-
-
-      <p style={{color : 'black' , fontSize : '20px' ,textAlign : 'right' , marginRight : '10px'}}>Total : {totalEarning} </p>
     </>
   );
 };

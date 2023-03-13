@@ -19,7 +19,7 @@ const Cat = () => {
         "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:5002/userBannerRouter/land1"
       );
       setCustomerBanner(data.Data);
-      console.log(data.Data);
+      console.log(data.Data)
     } catch (err) {
       console.log(err);
     }
@@ -45,7 +45,6 @@ const Cat = () => {
     const [image, setImage] = useState("");
     const [desc, setDesc] = useState("");
     const [url, setUrl] = useState("");
-    const [ link , setLink] = useState("")
 
     const postDetails = (e) => {
       const data = new FormData();
@@ -71,7 +70,7 @@ const Cat = () => {
       try {
         const data = await axios.post(
           "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:5002/userBannerRouter/addlandtoBanner",
-          { image: url, desc , link }
+          { image: url, desc }
         );
         console.log(data);
         fetchCustomerBanner();
@@ -86,7 +85,7 @@ const Cat = () => {
       try {
         const data = await axios.post(
           "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:5002/heroBannerRouter/addHeroBanner",
-          { image: url, desc , link }
+          { image: url, desc }
         );
         console.log(data);
         fetchHeroBanner();
@@ -131,14 +130,6 @@ const Cat = () => {
                 onChange={(e) => setDesc(e.target.value)}
                 onClick={() => postDetails()}
                 required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Link</Form.Label>
-              <Form.Control
-                type="text"
-                onChange={(e) => setLink(e.target.value)}
-                
               />
             </Form.Group>
             <Button variant="outline-success" type="submit">
@@ -214,14 +205,8 @@ const Cat = () => {
                       style={{ width: "100%", height: "200px" }}
                     />
                     <p style={{ textAlign: "center" }}> {i.desc}</p>
-                    <p style={{ textAlign: "center" }}>
-                      <a
-                        href={i.link}
-                        target="_blank"
-                        rel="noreferrer">
-                        Link
-                      </a>
-                    </p>
+                    <a href={i.link} target='_blank'rel="noreferrer"  >Link</a>
+
                     <div
                       style={{
                         marginTop: "2%",
@@ -276,14 +261,7 @@ const Cat = () => {
                       style={{ width: "100%", height: "200px" }}
                     />
                     <p style={{ textAlign: "center" }}> {i.desc} </p>
-                    <p style={{ textAlign: "center" }}>
-                      <a
-                        href={i.link}
-                        target="_blank"
-                        rel="noreferrer">
-                        Link
-                      </a>
-                    </p>
+
                     <div
                       style={{
                         marginTop: "2%",

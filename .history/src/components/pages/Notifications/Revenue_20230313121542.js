@@ -26,9 +26,12 @@ const Revenue = () => {
   };
 
 
-
-  let totalEarning = data.reduce((accumulator, currentValue) => accumulator + currentValue.earning, 0);
   
+  
+
+  let totalEarning = myArray.reduce((accumulator, currentValue) => accumulator + currentValue.earning, 0);
+  
+  console.log(totalEarning);
 
   useEffect(() => {
     fetchData();
@@ -132,9 +135,6 @@ const Revenue = () => {
           ))}
         </tbody>
       </Table>
-
-
-      <p style={{color : 'black' , fontSize : '20px' ,textAlign : 'right' , marginRight : '10px'}}>Total : {totalEarning} </p>
     </>
   );
 };

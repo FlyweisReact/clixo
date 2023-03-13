@@ -132,9 +132,6 @@ const Revenue = () => {
           ))}
         </tbody>
       </Table>
-
-
-      <p style={{color : 'black' , fontSize : '20px' ,textAlign : 'right' , marginRight : '10px'}}>Total : {totalEarning} </p>
     </>
   );
 };

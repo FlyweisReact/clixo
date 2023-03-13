@@ -134,7 +134,7 @@ const Revenue = () => {
       </Table>
 
 
-      <p style={{color : 'black' , fontSize : '20px' ,textAlign : 'right' , marginRight : '10px'}}>Total : {totalEarning} </p>
+      <p>Total : {totalEarning} </p>
     </>
   );
 };
