@@ -2,15 +2,14 @@
 
 import React from "react";
 import { RiCloseLine } from "react-icons/ri";
-import { Link, useNavigate } from "react-router-dom";
-import { BiLogOutCircle } from "react-icons/bi";
+  import { Link, useNavigate } from "react-router-dom";
+  import { BiLogOutCircle } from "react-icons/bi";
 import { AiOutlineUser, AiFillNotification } from "react-icons/ai";
 import { BsFillImageFill, BsGraphUp } from "react-icons/bs";
 import { MdDashboardCustomize, MdPrivacyTip } from "react-icons/md";
 import { IoIosPricetags } from "react-icons/io";
 import { toast } from "react-toastify";
 import { FiHelpCircle } from "react-icons/fi";
-import { FaCity } from "react-icons/fa";
 
 const Sidebar = ({ hamb, setHamb }) => {
   const navigate = useNavigate();
