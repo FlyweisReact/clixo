@@ -362,7 +362,7 @@ const NotifyLabour = () => {
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody> 
+            <tbody>
               {data?.map((i, index) => (
                 <tr key={index}>
                   <td> {i.userobject?.name} </td>

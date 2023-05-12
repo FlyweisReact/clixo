@@ -248,7 +248,7 @@ const Payment = () => {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Expected Price</Form.Label>
+                  <Form.Label>Actual Price</Form.Label>
                   <Form.Control
                     type="number"
                     min={0}
@@ -317,16 +317,14 @@ const Payment = () => {
                   <Form.Control
                     type="number"
                     min={0}
-                    required
                     onChange={(e) => setActualPrice(e.target.value)}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Expected Price</Form.Label>
+                  <Form.Label>Actual Price</Form.Label>
                   <Form.Control
                     type="number"
                     min={0}
-                    required
                     onChange={(e) => setExceptedPrice(e.target.value)}
                   />
                 </Form.Group>

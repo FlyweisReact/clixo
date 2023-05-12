@@ -117,7 +117,7 @@ const Dashboard = () => {
             }}
           >
             {" "}
-            Today
+            Weekly
           </p>
           <p
             onClick={() => {

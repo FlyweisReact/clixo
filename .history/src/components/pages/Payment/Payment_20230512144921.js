@@ -181,47 +181,12 @@ const Payment = () => {
         </Modal.Header>
         <Modal.Body>
           <Container>
-            {edit ? (
+            {/* {edit ? (
               <Form onSubmit={EditData}>
-
-
-              {imageLoading ? (
-                  <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </Spinner>
-                ) : (
-                  ""
-                )}
-
-                {succeddMsg ? (
-                  <Alert variant="success">Image Uploaded</Alert>
-                ) : (
-                  ""
-                )}
-
-                <div className="d-flex gap-3" style={{ alignItems: "center" }}>
-                  <Form.Group className="mb-3">
-                    <Form.Label> Image </Form.Label>
-                    <Form.Control
-                      type="file"
-                      onChange={(e) => setImageUrl(e.target.files[0])}
-                    />
-                  </Form.Group>
-                  <Button
-                    style={{ height: "40px", marginTop: "10px" }}
-                    onClick={() => uploadImage()}
-                  >
-                    Upload
-                  </Button>
-                </div>
-
-
-
                 <Form.Group className="mb-3">
                   <Form.Label> Name </Form.Label>
                   <Form.Control
                     type="text"
-                    required
                     placeholder={pName}
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -231,7 +196,6 @@ const Payment = () => {
                   <Form.Label> Description </Form.Label>
                   <Form.Control
                     type="text"
-                    required
                     placeholder={pdesc}
                     onChange={(e) => setDesc(e.target.value)}
                   />
@@ -242,17 +206,15 @@ const Payment = () => {
                   <Form.Control
                     type="number"
                     min={0}
-                    required
                     placeholder={paccualPrice}
                     onChange={(e) => setActualPrice(e.target.value)}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Expected Price</Form.Label>
+                  <Form.Label>Actual Price</Form.Label>
                   <Form.Control
                     type="number"
                     min={0}
-                    required
                     placeholder={pexceptedPrice}
                     onChange={(e) => setExceptedPrice(e.target.value)}
                   />
@@ -262,8 +224,8 @@ const Payment = () => {
                   Submit
                 </Button>
               </Form>
-            ) : (
-              <Form onSubmit={AddData}>
+            ) : ( */}
+              <Form onSubmit={edit ? EditData : AddData}>
                 {imageLoading ? (
                   <Spinner animation="border" role="status">
                     <span className="visually-hidden">Loading...</span>
@@ -298,7 +260,6 @@ const Payment = () => {
                   <Form.Label> Name </Form.Label>
                   <Form.Control
                     type="text"
-                    required
                     onChange={(e) => setName(e.target.value)}
                   />
                 </Form.Group>
@@ -307,7 +268,6 @@ const Payment = () => {
                   <Form.Label> Description </Form.Label>
                   <Form.Control
                     type="text"
-                    required
                     onChange={(e) => setDesc(e.target.value)}
                   />
                 </Form.Group>
@@ -317,16 +277,14 @@ const Payment = () => {
                   <Form.Control
                     type="number"
                     min={0}
-                    required
                     onChange={(e) => setActualPrice(e.target.value)}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Expected Price</Form.Label>
+                  <Form.Label>Actual Price</Form.Label>
                   <Form.Control
                     type="number"
                     min={0}
-                    required
                     onChange={(e) => setExceptedPrice(e.target.value)}
                   />
                 </Form.Group>
@@ -335,7 +293,7 @@ const Payment = () => {
                   Submit
                 </Button>
               </Form>
-            )}
+            {/* )} */}
           </Container>
         </Modal.Body>
       </Modal>

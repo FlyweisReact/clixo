@@ -15,7 +15,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [count, setCount] = useState("");
-  const [title, setTitle] = useState("Today");
+  const [ title, setTitle ] = useState("Today")
 
   const filterData = useCallback(async (url) => {
     try {
@@ -110,42 +110,15 @@ const Dashboard = () => {
           {title} Summary
         </p>
         <div className="dropdown-content">
-          <p
-            onClick={() => {
-              setTitle("Today");
-              filterData("today");
-            }}
-          >
-            {" "}
-            Today
-          </p>
-          <p
-            onClick={() => {
-              setTitle("Weekly");
-              filterData("weekly");
-            }}
-          >
-            {" "}
-            Weekly
-          </p>
-          <p
-            onClick={() => {
-              setTitle("Monthly");
-              filterData("monthly");
-            }}
-          >
-            {" "}
-            Monthly
-          </p>
-          <p
-            onClick={() => {
-              setTitle("Yearly");
-              filterData("monthly");
-            }}
-          >
-            {" "}
-            Yearly
-          </p>
+          <p onClick={() => {
+            setTitle("Weekly")
+            filterData("weekly")}}> Weekly</p>
+          <p onClick={() => {
+            setTitle("Monthly")
+            filterData("monthly")}}> Monthly</p>
+          <p onClick={() => {
+            setTitle("Yearly")
+            filterData("monthly")}}> Yearly</p>
         </div>
       </div>
 

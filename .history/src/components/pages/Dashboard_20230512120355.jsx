@@ -112,15 +112,6 @@ const Dashboard = () => {
         <div className="dropdown-content">
           <p
             onClick={() => {
-              setTitle("Today");
-              filterData("today");
-            }}
-          >
-            {" "}
-            Today
-          </p>
-          <p
-            onClick={() => {
               setTitle("Weekly");
               filterData("weekly");
             }}

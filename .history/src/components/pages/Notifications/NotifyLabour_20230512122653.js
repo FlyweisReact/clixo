@@ -362,12 +362,12 @@ const NotifyLabour = () => {
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody> 
+            <tbody>
               {data?.map((i, index) => (
                 <tr key={index}>
                   <td> {i.userobject?.name} </td>
                   <td> {i.heroobject?.name} </td>
-                  <td> {i.heroobject?.SelectSkill} </td>
+                  <td> {i.heroobject?.service} </td>
                   <td> {i.Date.slice(0, 10)} </td>
                   <td> {i.start_time?.slice(0, 10)} </td>
                   <td>

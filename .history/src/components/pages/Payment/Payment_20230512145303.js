@@ -248,7 +248,7 @@ const Payment = () => {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Expected Price</Form.Label>
+                  <Form.Label>Actual Price</Form.Label>
                   <Form.Control
                     type="number"
                     min={0}

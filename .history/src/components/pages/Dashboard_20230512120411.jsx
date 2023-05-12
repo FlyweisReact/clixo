@@ -113,11 +113,11 @@ const Dashboard = () => {
           <p
             onClick={() => {
               setTitle("Today");
-              filterData("today");
+              filterData("weekly");
             }}
           >
             {" "}
-            Today
+            Weekly
           </p>
           <p
             onClick={() => {

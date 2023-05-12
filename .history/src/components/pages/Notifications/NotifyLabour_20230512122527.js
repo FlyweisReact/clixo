@@ -51,7 +51,6 @@ const NotifyLabour = () => {
         "https://5mkj1ib4ve.execute-api.ap-south-1.amazonaws.com/dev/api/bookings/getbook"
       );
       setData(data.reverse());
-      console.log(data)
     } catch (err) {
       console.log(err);
     }
@@ -362,12 +361,12 @@ const NotifyLabour = () => {
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody> 
+            <tbody>
               {data?.map((i, index) => (
                 <tr key={index}>
                   <td> {i.userobject?.name} </td>
                   <td> {i.heroobject?.name} </td>
-                  <td> {i.heroobject?.SelectSkill} </td>
+                  <td> {i.service} </td>
                   <td> {i.Date.slice(0, 10)} </td>
                   <td> {i.start_time?.slice(0, 10)} </td>
                   <td>
@@ -382,8 +381,10 @@ const NotifyLabour = () => {
                   {i.Status === "pending" ? <p style={{color : 'green' , fontWeight : 'bold'}} >Pending</p> : ""}
                   {i.Status === "Completed" ? <p style={{color : 'blue' , fontWeight : 'bold'}} >Completed</p> : ""}
                   {i.Status === "confirmed" ? <p style={{color : '#3584e6' , fontWeight : 'bold'}} >Confirmed</p> : ""}
-                  {i.Status === "Scheduled" ? <p style={{color : '#3584e6' , fontWeight : 'bold'}} >Scheduled	</p> : ""}
+                  {i.Status === "Scheduled	
+" ? <p style={{color : '#3584e6' , fontWeight : 'bold'}} >Confirmed</p> : ""}
                   {i.Status === "Cancelled" ? <p style={{color : 'red' , fontWeight : 'bold'}} >Cancelled</p> : ""}
+                {i.Status}
                   </td>
                   <td>
                     <div style={{ display: "flex", gap: "10px" }}>
